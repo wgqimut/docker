@@ -34,4 +34,5 @@ RUN cd /tmp && \
     python2.7 setup.py install && \
     curl https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py | python2.7 - && \
     pip install virtualenv
+    pip install tornado
 
