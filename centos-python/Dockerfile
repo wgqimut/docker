@@ -1,6 +1,6 @@
 FROM centos:centos6
 
-MAINTAINER Traun Leyden <tleyden@couchbase.com>
+MAINTAINER Grady Wong <wgqimut@gmail.com>
 
 # Install yum dependencies
 RUN yum -y update && \
@@ -33,6 +33,6 @@ RUN cd /tmp && \
     cd setuptools-1.4.2 && \
     python2.7 setup.py install && \
     curl https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py | python2.7 - && \
-    pip install virtualenv
+    pip install virtualenv && \
     pip install tornado
 
