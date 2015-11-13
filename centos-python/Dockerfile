@@ -36,8 +36,11 @@ RUN cd /tmp && \
     pip install virtualenv && \
     
 # Install MySQLdb and tornado
-RUN yum install -y MySQL-python \
-    pip install tornado
+RUN yum install -y MySQL-python &&\
+    pip install tornado && \
+    pip install psutil && \
+    pip install python-ldap && \
+    pip install rrdtool
 
     
 
