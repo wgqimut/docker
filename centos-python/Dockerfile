@@ -19,9 +19,9 @@ RUN yum -y update && \
 
 # Install python2.7
 RUN cd /tmp && \
-    wget https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz && \
-    tar xvfz Python-2.7.8.tgz && \
-    cd Python-2.7.8 && \
+    wget https://www.python.org/ftp/python/2.7.10/Python-2.7.10.tgz && \
+    tar xvfz Python-2.7.10.tgz && \
+    cd Python-2.7.10 && \
     ./configure --prefix=/usr/local && \
     make && \
     make altinstall
@@ -34,5 +34,10 @@ RUN cd /tmp && \
     python2.7 setup.py install && \
     curl https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py | python2.7 - && \
     pip install virtualenv && \
+    
+# Install MySQLdb and tornado
+RUN yum install -y MySQL-python \
     pip install tornado
+
+    
 
