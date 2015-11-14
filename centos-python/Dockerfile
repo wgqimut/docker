@@ -40,7 +40,18 @@ RUN yum install -y MySQL-python &&\
     pip install tornado && \
     pip install psutil && \
     pip install python-ldap && \
+
+# Install rrdtool
+RUN cd /tmp && \
+    wget http://oss.oetiker.ch/rrdtool/pub/rrdtool-1.5.5.tar.gz && \
+    tar zxvf rrdtool-1.5.5.tar.gz && \
+    cd rrdtool-1.5.5 && \
+    ./configure --prefix=/usr/local && \
+    make && \
+    make install && \
     pip install rrdtool
 
+    
+    
     
 
