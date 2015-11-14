@@ -33,13 +33,13 @@ RUN cd /tmp && \
     cd setuptools-1.4.2 && \
     python2.7 setup.py install && \
     curl https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py | python2.7 - && \
-    pip install virtualenv && \
+    pip install virtualenv
     
 # Install MySQLdb and tornado
 RUN yum install -y MySQL-python &&\
     pip install tornado && \
     pip install psutil && \
-    pip install python-ldap && \
+    pip install python-ldap
 
 # Install rrdtool
 RUN cd /tmp && \
