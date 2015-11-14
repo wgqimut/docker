@@ -50,8 +50,3 @@ RUN cd /tmp && \
     make && \
     make install && \
     pip install rrdtool
-
-    
-    
-    
-
