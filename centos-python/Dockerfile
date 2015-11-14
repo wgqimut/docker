@@ -43,7 +43,8 @@ RUN yum install -y MySQL-python &&\
     pip install python-ldap
 
 # Install rrdtool
-RUN cd /tmp && \
+RUN yum install  -y pcre-devel.x86_64 pango-devel.x86_64 libxml2-devel.x86_64 && \
+    cd /tmp && \
     wget http://oss.oetiker.ch/rrdtool/pub/rrdtool-1.5.5.tar.gz && \
     tar zxvf rrdtool-1.5.5.tar.gz && \
     cd rrdtool-1.5.5 && \
