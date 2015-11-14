@@ -15,7 +15,8 @@ RUN yum -y update && \
     sudo \
     tar \
     wget \
-    zlib-dev
+    zlib-dev \
+    openldap-devel
 
 # Install python2.7
 RUN cd /tmp && \
